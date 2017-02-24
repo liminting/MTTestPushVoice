@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFE-i8-8Sb">
+                                <rect key="frame" x="10" y="20" width="355" height="647"/>
+                                <mutableString key="text">  此功能是IOS7新增加的功能，允许，应用收到通知后在后台（background）状态下运行一段代码，可用于从服务器获取内容更新
+普通推送：收到推送后（有文字有声音），点开通知，进入APP后，才执行
+静默推送：收到推送（没有文字没有声音），不用点开通知，不用打开APP，就能执行，用户完全感觉不到
+注意：使用最新格式的notification
+（1）alert一定不能有内容 
+（2）一定要加”content-available” : 1
+静默推送只能在应用在前台和应用在后台挂起时收到，也就是说，如果应用未启动或进程被杀掉，静默推送是唤醒不了设备的。实现静默推送别忘了Xcode设置工程支持后台运行模式添加remote notifications；
+
+实现代码：
+
+if( [[[UIDevice currentDevice] systemVersion] integerValue] &gt;= 7.0)
+{
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@“hello world”];
+    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];    
+    [synth speakUtterance:utterance];
+}
+上面的代码只能在前台运行，如果退到后台的话则不能运行，如果想要在推送的时候播报文字语音，那么这就有点蛋疼了。好在也有解决方法，在AppDelegate的applicationDidLaunch的代码中加上如下代码，则可支持后台语音播报文字内容：
+NSError *error = NULL;
+AVAudioSession *session = [AVAudioSession sharedInstance];
+[session setCategory:AVAudioSessionCategoryPlayback error:&amp;error];
+if(error) {
+    // Do some error handling
+}
+[session setActive:YES error:&amp;error];
+if (error) {
+    // Do some error handling
+} 最后发现即使这样依旧放不出声音，需要在capabilities 中的background mode中勾选voice over ip 和 remote notifications</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wFE-i8-8Sb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AYS-BJ-NgH"/>
+                            <constraint firstAttribute="trailing" secondItem="wFE-i8-8Sb" secondAttribute="trailing" constant="10" id="Jua-Rq-Y4F"/>
+                            <constraint firstItem="wFE-i8-8Sb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="QK5-Bf-Lcp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wFE-i8-8Sb" secondAttribute="bottom" id="arW-wb-4yU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-80.799999999999997" y="77.811094452773617"/>
         </scene>
     </scenes>
 </document>

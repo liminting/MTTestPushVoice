@@ -1,0 +1,9 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GreedGeTuiSDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/GreedGeTuiSDK/GtSdkLib"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GreedGeTuiSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"GeTuiSdk-1.3.2" -l"sqlite3.0" -l"z" -framework "AVFoundation" -framework "CFNetwork" -framework "CoreBluetooth" -framework "CoreLocation" -framework "CoreTelephony" -framework "SystemConfiguration"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods

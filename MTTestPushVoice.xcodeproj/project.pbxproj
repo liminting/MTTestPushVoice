@@ -15,6 +15,7 @@
 		5F19CA4C1E5DCFBA002F1DB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19CA4A1E5DCFBA002F1DB0 /* LaunchScreen.storyboard */; };
 		5F19CA571E5DCFBA002F1DB0 /* MTTestPushVoiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F19CA561E5DCFBA002F1DB0 /* MTTestPushVoiceTests.m */; };
 		5F19CA621E5DCFBA002F1DB0 /* MTTestPushVoiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F19CA611E5DCFBA002F1DB0 /* MTTestPushVoiceUITests.m */; };
+		868625DE43A57394563E2BE1 /* libPods-MTTestPushVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E48B6070945BB703A5B2DAD1 /* libPods-MTTestPushVoice.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35937840D8A8AE8D7E10CABB /* Pods-MTTestPushVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTTestPushVoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTTestPushVoice/Pods-MTTestPushVoice.release.xcconfig"; sourceTree = "<group>"; };
+		54ED50CA05A0C4A0207151A7 /* Pods-MTTestPushVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTTestPushVoice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTTestPushVoice/Pods-MTTestPushVoice.debug.xcconfig"; sourceTree = "<group>"; };
 		5F19CA391E5DCFBA002F1DB0 /* MTTestPushVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTTestPushVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F19CA3D1E5DCFBA002F1DB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F19CA3F1E5DCFBA002F1DB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		5F19CA5D1E5DCFBA002F1DB0 /* MTTestPushVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTTestPushVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F19CA611E5DCFBA002F1DB0 /* MTTestPushVoiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTTestPushVoiceUITests.m; sourceTree = "<group>"; };
 		5F19CA631E5DCFBA002F1DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F19CA6F1E5DD673002F1DB0 /* MTTestPushVoice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MTTestPushVoice.entitlements; sourceTree = "<group>"; };
+		E48B6070945BB703A5B2DAD1 /* libPods-MTTestPushVoice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTTestPushVoice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868625DE43A57394563E2BE1 /* libPods-MTTestPushVoice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		157130B39C580845662A79C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54ED50CA05A0C4A0207151A7 /* Pods-MTTestPushVoice.debug.xcconfig */,
+				35937840D8A8AE8D7E10CABB /* Pods-MTTestPushVoice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5F19CA301E5DCFBA002F1DB0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,8 @@
 				5F19CA551E5DCFBA002F1DB0 /* MTTestPushVoiceTests */,
 				5F19CA601E5DCFBA002F1DB0 /* MTTestPushVoiceUITests */,
 				5F19CA3A1E5DCFBA002F1DB0 /* Products */,
+				157130B39C580845662A79C2 /* Pods */,
+				DC994FDC1DA121D6CAE9B24F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +118,7 @@
 		5F19CA3B1E5DCFBA002F1DB0 /* MTTestPushVoice */ = {
 			isa = PBXGroup;
 			children = (
+				5F19CA6F1E5DD673002F1DB0 /* MTTestPushVoice.entitlements */,
 				5F19CA3F1E5DCFBA002F1DB0 /* AppDelegate.h */,
 				5F19CA401E5DCFBA002F1DB0 /* AppDelegate.m */,
 				5F19CA421E5DCFBA002F1DB0 /* ViewController.h */,
@@ -140,6 +158,14 @@
 			path = MTTestPushVoiceUITests;
 			sourceTree = "<group>";
 		};
+		DC994FDC1DA121D6CAE9B24F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E48B6070945BB703A5B2DAD1 /* libPods-MTTestPushVoice.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F19CA661E5DCFBA002F1DB0 /* Build configuration list for PBXNativeTarget "MTTestPushVoice" */;
 			buildPhases = (
+				0D839BE809579BEB6FDF39AF /* [CP] Check Pods Manifest.lock */,
 				5F19CA351E5DCFBA002F1DB0 /* Sources */,
 				5F19CA361E5DCFBA002F1DB0 /* Frameworks */,
 				5F19CA371E5DCFBA002F1DB0 /* Resources */,
+				6F5DB4389C224D51F25D3AEF /* [CP] Embed Pods Frameworks */,
+				3F02BC2EBB9523EFDE3B4B70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +236,16 @@
 				TargetAttributes = {
 					5F19CA381E5DCFBA002F1DB0 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 3N86ZP6GF8;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5F19CA511E5DCFBA002F1DB0 = {
 						CreatedOnToolsVersion = 8.1;
@@ -267,6 +305,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D839BE809579BEB6FDF39AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F02BC2EBB9523EFDE3B4B70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTTestPushVoice/Pods-MTTestPushVoice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F5DB4389C224D51F25D3AEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTTestPushVoice/Pods-MTTestPushVoice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F19CA351E5DCFBA002F1DB0 /* Sources */ = {
@@ -422,23 +508,35 @@
 		};
 		5F19CA671E5DCFBA002F1DB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54ED50CA05A0C4A0207151A7 /* Pods-MTTestPushVoice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MTTestPushVoice/MTTestPushVoice.entitlements;
+				DEVELOPMENT_TEAM = 3N86ZP6GF8;
 				INFOPLIST_FILE = MTTestPushVoice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TL.MTTestPushVoice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suso56.kerwin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "971664f9-39b7-4cef-a937-4812303f303d";
+				PROVISIONING_PROFILE_SPECIFIER = pos_devprofile2;
 			};
 			name = Debug;
 		};
 		5F19CA681E5DCFBA002F1DB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35937840D8A8AE8D7E10CABB /* Pods-MTTestPushVoice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MTTestPushVoice/MTTestPushVoice.entitlements;
+				DEVELOPMENT_TEAM = 3N86ZP6GF8;
 				INFOPLIST_FILE = MTTestPushVoice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TL.MTTestPushVoice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suso56.kerwin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "971664f9-39b7-4cef-a937-4812303f303d";
+				PROVISIONING_PROFILE_SPECIFIER = pos_devprofile2;
 			};
 			name = Release;
 		};
@@ -507,6 +605,7 @@
 				5F19CA681E5DCFBA002F1DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F19CA691E5DCFBA002F1DB0 /* Build configuration list for PBXNativeTarget "MTTestPushVoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +614,7 @@
 				5F19CA6B1E5DCFBA002F1DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F19CA6C1E5DCFBA002F1DB0 /* Build configuration list for PBXNativeTarget "MTTestPushVoiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +623,7 @@
 				5F19CA6E1E5DCFBA002F1DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
